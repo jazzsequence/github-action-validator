@@ -42,5 +42,6 @@ runs:
       run: |
         bash ${{ github.action_path }}/bin/do-ascii.sh
     - name: Validate
+      shell: bash
     - run: |
         action-validator ${{ inputs.path-to-workflows }}
