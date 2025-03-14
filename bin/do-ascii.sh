@@ -2,32 +2,45 @@
 set -euo pipefail
 
 do_ascii() {
-echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWK0KK0KNWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKxo:'.'''':c:xKXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNkc'. ....''','.',:xKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMKc.  ...';;;,,,,,,;;,:dXMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMX:  ....';cccccclllc:;;:xNMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMWd. ...'';:cllllodddoc;;,;OMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMXc......',;:cllodxxxdl:;''dNMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMX: .....',;:::ccoddddddl;.:0WMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMNc......';::;;;;::cloodol;;dXMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMWx......',;;:;,,',;clloolclOWMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMXl........,::;,'',;cooolcoKMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMW0;...''..,clolc::coxxdlldKMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMNo'',,''';codollc::clllcdKMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMk,'''...';;;;:clc;,;:ccl0WMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMXl..........':cl;,,;;;;;;:ldxkO0KXNWWMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMKc... .';cllollc:;,,',;;.    ...',;:cok0XNWMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMWNN0;.....':ccc:llc:,.';:c,              .',:ox0XWMM
-MMMMMMMMMMMMMMMMMMMMMMMWNK0xc'...   .....'';:c:,..,;:c;.                   .':oO
-MMMMMMMMMMMMMMMMMMMWNOd:'.           .....',;,'..',;,,;.                       .
-MMMMMMMMMMMMMMWXOdc;'.            .   ................,.                        
-MMMMMMMMMMMMNOl.                  .                  ';.                        
-MMMMMMMMMMNx;.                   .'.                 ;;                         
-MMMMMMMMW0:                       ,.                .:'                         
-MMMMMMMN0;                        ,,                ':.                         
-MMMMW0l,.                         ';.               ;;.                         
-MMMMX;                            ':.              .:,                          
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXxlooddood0XKKNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMW0oc:,... .....,;..:OXNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKkc.   ...'..',..,'..',,;l0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXl.   ......''',,,;;,,,...,;:lxKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWO;.    ....',;:;;;;,''''';:;,'''cKMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO'     .....,:ccc::::ccccllc:;;;;;xNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK:   .....'',:cccllllloooooolc:;,,';dNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWo. ......'',;::cclllloodxxxdoc;;:;,.;0MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNl. .......',;;::cllloodxxxxxdl:,,,;,,dNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0,  .......',,;;;:ccclodddxxxddol:,..'lXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK;  .......',,;:::;;::loodddddddddoc'.,kNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMX:  ......',,;:::;;:::ccccllloooddol:',cxXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXc..........',;:::;;,,,,,;:lloodddol:;cokNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWk'........',,,;;:;;,,,,,;;:ccloooolc:cdXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo.....'''''''',:c:;,'....,;:cllooocclONMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK:............':llc:;;;;:clodddooolco0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWO,....'',,'..':looolc:::cldxxxxdllcl0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXl..'',,,'..',:lddooolc:;;:lodoollco0MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWx'.',,,'.',,;clddooloool;,,:cccclclOWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO;.''''.....',;;,,,;:clcc;,,;::cccckWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo........  ......';cll:,',,;::::;;;cdkOKNNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMKc.....  ...'',,;:cloo:''',;;;,,,;,.  ..,,;cllodxk0KXNWWMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKc.....  .,:lllodddoccll:;;'''',:c;.            ...',;:okOKNWMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXl.........;clllc:cloolc:,..',;:cc'                    ...;cldkKNWMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXOkkOo.  ......',;;;;:ccclc:;'.'',:::c:.                          ..,cdkKNWMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNXK0xc.          .........',;:cc:,....';:::cc'                               ..,lxK
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX0xc,..                ......',;:::;,....',;;;;,c,                                   ..
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMNX0kl'.                      .....''''''.....''',,,..:'                                     
+MMMMMMMMMMMMMMMMMMMMMMMNKko:,..                    ..       ..................  .:.                                     
+MMMMMMMMMMMMMMMMMMMMWKo,.                          ..     ...     .......       ;c.                                     
+MMMMMMMMMMMMMMMMMWNOc.                             '.                          .cc.                                     
+MMMMMMMMMMMMMMMMNd'                                ',.                         'l;                                      
+MMMMMMMMMMMMMMWO;                                  ':.                         ;l,                                      
+MMMMMMMMMMMMMWd.                                   'c'                        .cl.                                      
+MMMMMMMMMMMWW0,                                    .c;                        'oc.                                      
+MMMMMMMMW0dc,.                                     .::.                       ;o;                                       
+MMMMMMMNo.                                         .:c.                      .:l.                                       
+MMMMMMMk.                                           ;l,                      .cc.                                       
 
 __  ______     ____  ___ _       ________
 \ \/ / __ \   / __ \/   | |     / / ____/
