@@ -36,7 +36,7 @@ runs:
         # Make executable and move to /usr/local/bin
         chmod +x action-validator
         sudo mv action-validator /usr/local/bin/action-validator
-        action-validator -v  
+        action-validator -V
     - name: Show Ascii art
       shell: bash
       if: ${{ inputs.show-ascii-art == true }}
