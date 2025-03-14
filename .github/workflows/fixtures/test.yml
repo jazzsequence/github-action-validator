@@ -9,8 +9,8 @@ on:
   pull_request:
     branches:
       - main
-      paths-ignore:
-        - '*.yml'
+    paths-ignore:
+      - '*.yml'
 
 jobs:
   test-validation:
