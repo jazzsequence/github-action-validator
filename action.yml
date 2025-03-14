@@ -17,20 +17,15 @@ runs:
   using: composite
   steps:
     - uses: actions/checkout@v4
-    - name: Install Rust and rust-script
+    - name: Install prebuilt rust-script
       shell: bash
       run: |
-        if ! command -v rustc &> /dev/null; then
-          echo "⚙️ Installing Rust..."
-          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-          source $HOME/.cargo/env
-        fi
-
         if ! command -v rust-script &> /dev/null; then
-          echo "⚙️ Installing rust-script..."
-          cargo install rust-script
-        else
-          echo "✅ rust-script already installed"
+          echo "⚙️ Downloading prebuilt rust-script..."
+          curl -sSL -o rust-script.tar.gz https://github.com/fornwall/rust-script/releases/latest/download/rust-script-x86_64-unknown-linux-gnu.tar.gz
+          tar -xzf rust-script.tar.gz
+          chmod +x rust-script
+          sudo mv rust-script /usr/local/bin/rust-script
         fi
     - name: Install action-validator
       shell: bash
