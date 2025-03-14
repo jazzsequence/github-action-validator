@@ -17,13 +17,16 @@ if ! command -v rust-script &> /dev/null; then
     cargo install rust-script
 fi
 
+# Determine the workflow file path
+INPUT_PATH_TO_WORKFLOWS="${1:-'.github/workflows/*.yml'}"
+
 echo "🔍 Running GitHub Actions validation with action-validator..."
+echo "📂 Validating workflows in: $INPUT_PATH_TO_WORKFLOWS"
 
 scan_count=0
 error_count=0
 
-# Find all modified workflow files in `.github/workflows/` or `.github/actions/`
-for action in $(git diff --cached --name-only --diff-filter=ACM | grep -E '^\.github/(workflows|actions)/.*\.ya?ml$'); do
+for action in $INPUT_PATH_TO_WORKFLOWS; do
   OUTPUT_FILE=$(mktemp)
 
   # Validate the action file

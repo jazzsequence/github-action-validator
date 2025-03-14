@@ -54,4 +54,4 @@ runs:
         bash ${{ github.action_path }}/bin/do-ascii.sh
     - name: Validate Workflows
       shell: bash
-      run: bash ${{ github.action_path }}/bin/validate.sh
+      run: bash ${{ github.action_path }}/bin/validate.sh "${{ inputs.path-to-workflows }}"
