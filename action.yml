@@ -24,7 +24,8 @@ runs:
         VERSION=$(curl -sSL https://api.github.com/repos/mpalmer/action-validator/releases/latest | jq -r '.tag_name')
         FILE_NAME="action-validator_linux_amd64"
         DOWNLOAD_URL="https://github.com/mpalmer/action-validator/releases/download/${VERSION}/${FILE_NAME}"
-        echo "Downloading mpalmer/action-validator ${VERSION} from ${DOWNLOAD_URL}..."
+        echo "Downloading mpalmer/action-validator ${VERSION} from ${DOWNLOAD_URL} ..."
+        curl -sSL -o action-validator "$DOWNLOAD_URL"
 
         # Validate that the file is a valid binary
         if ! file action-validator | grep -q "ELF"; then
