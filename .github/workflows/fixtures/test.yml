@@ -16,7 +16,7 @@ jobs:
     env:
       VAR1: 1
       VAR2: 'two'
-      VAR3: ['3']
+      VAR3: '3'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
