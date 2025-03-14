@@ -59,22 +59,4 @@ runs:
         bash ${{ github.action_path }}/bin/do-ascii.sh
     - name: Validate Workflows
       shell: bash
-      run: |
-        OUTPUT_FILE=$(mktemp)
-        action-validator ${{ inputs.path-to-workflows }} > "$OUTPUT_FILE" 2>&1
-        EXIT_CODE=$?
-
-        # If validation fails, format errors for readability
-        if [[ $EXIT_CODE -ne 0 ]]; then
-          echo "❌ Workflow validation failed! See errors below:"
-          
-          # Parse JSON and extract relevant error details
-          cat "$OUTPUT_FILE" | jq -r '
-            .errors[] | 
-            "🔹 " + (.title // "Unknown error") + " (" + .code + ") at " + (.path // "unknown location")
-          '
-          
-          exit 1  # Ensure the action fails properly
-        else
-          echo "✅ All workflows validated successfully!"
-        fi
+      run: bash ${{ github.action_path }}/bin/validate.sh
