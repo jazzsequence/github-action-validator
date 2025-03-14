@@ -17,6 +17,21 @@ runs:
   using: composite
   steps:
     - uses: actions/checkout@v4
+    - name: Install Rust and rust-script
+      shell: bash
+      run: |
+        if ! command -v rustc &> /dev/null; then
+          echo "⚙️ Installing Rust..."
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          source $HOME/.cargo/env
+        fi
+
+        if ! command -v rust-script &> /dev/null; then
+          echo "⚙️ Installing rust-script..."
+          cargo install rust-script
+        else
+          echo "✅ rust-script already installed"
+        fi
     - name: Install action-validator
       shell: bash
       run: |
