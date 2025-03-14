@@ -54,7 +54,7 @@ runs:
         action-validator -V
     - name: Show Ascii art
       shell: bash
-      if: ${{ inputs.show-ascii-art == true }}
+      if: ${{ inputs.show-ascii-art == 'true' }}
       run: |
         bash ${{ github.action_path }}/bin/do-ascii.sh
     - name: Validate Workflows
