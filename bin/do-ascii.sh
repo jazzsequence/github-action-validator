@@ -2,60 +2,50 @@
 set -euo pipefail
 
 do_ascii() {
-echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMKxdxkkkxxkKNWNNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNOxdo;.. ..'...,c:;;xNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXk;.  .......',..',...,cooxKMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNx:'.    ....''.','';,',,'...,lOXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWXl.    .....'',,,,,;;,,,'...,;;'.,l0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWk,     .....',;:cc:;;,,,,,,;cc;,,;;;oXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK;      .....,:ccccccccllllllllc:;;;,;kWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK:   ......',,;:ccclllllooddddolc::;,,',xNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMx.  ......'',,;:cccllllooddxxxdoc;;::,'.cXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWd. ........'',;:::cllooodxxxxxxdl:,',;;',xWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK:  ........'',;;;:cclllodddxxxxddolc,'.''oNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXc  ........',,,;:::::::loodddddxdddooc,..:KWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNl  .......'',;;::;,;::cclloooooododddoc,.,lkNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNl. .........',;::;;::;;,,,;;clllooodooc;;ccdXMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWx.....   ....',;;::;,,,,,;:cloooddddooc::cdKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNl.......',,,,,,,;::;;,''..'',;:cloooolcclkNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM0;..............,cl:;,'...',;cloooooolccd0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWx'.............':llllc:;:::clodxddoolcco0WMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo....'',,,'...,:lodooc::::cldxxxxdolccoKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO,.'',,,,''..';coddooool:;;;:loooolclcoKMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMK:.'',,,'..',,;cldddooooooc;',:ccccclcl0MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNo..',''.....'';::;;,;:cllc:;,';:::ccccOWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWO,.........  .......,:clc:;,,,,::::::;cdOKXNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNd......  .....'''',;cloo;''',;;;;;;;,.....;clodxkO0KKXNWMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMXo.....   ..,;:c:cooddoc:::;;;,,,'',::,.         ....';:coddkKNWMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNd'...... .':loooddoc:coolc:;'..'';ccc'                    ..,:ldO0KNWMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWx..........';::cc:cllooc::,..'',:c:c;.                         ...,:okKNWMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNOdlcll;.    ......',,,,;::ccc::,...',;:::cc.                               ..,cokKNMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNK0Odl,.            ..........',:cc::,....',;::::l,                                    ..;oO
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN0kl'.                   .......',,;::;;'....',,;;;,,c;                                        .
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNX0ko'.                   .     .....''''''......''',,,'..:,                                         
-MMMMMMMMMMMMMMMMMMMMMMMMMMNKko:,..                      ..        ....................  .c,                                         
-MMMMMMMMMMMMMMMMMMMMMMMWOl,.                            ..      ...      .........      ,l'                                         
-MMMMMMMMMMMMMMMMMMMMWXx:.                               .'                             .:l.                                         
-MMMMMMMMMMMMMMMMMMWOc'                                  ';.                            'lc.                                         
-MMMMMMMMMMMMMMMMWXo.                                    ':.                            ;o;                                          
-MMMMMMMMMMMMMMMNx'                                      .:,                           .cl'                                          
-MMMMMMMMMMMMMMMO.                                       .c:.                          'll.                                          
-MMMMMMMMMMMMNK0c                                        .:c.                          ;o:.                                          
-MMMMMMMMMXkl,..                                         .;l,                         .co,                                           
-MMMMMMMMXc                                               ,l:.                        .ll.                                           
-MMMMMMMWd.                                               'lc.                        ,oc.                                           
+echo "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWK0KK0KNWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWKxo:'.'''':c:xKXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMNkc'. ....''','.',:xKWMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMKc.  ...';;;,,,,,,;;,:dXMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMX:  ....';cccccclllc:;;:xNMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMWd. ...'';:cllllodddoc;;,;OMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMXc......',;:cllodxxxdl:;''dNMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMX: .....',;:::ccoddddddl;.:0WMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMNc......';::;;;;::cloodol;;dXMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMWx......',;;:;,,',;clloolclOWMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMXl........,::;,'',;cooolcoKMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMW0;...''..,clolc::coxxdlldKMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMNo'',,''';codollc::clllcdKMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMk,'''...';;;;:clc;,;:ccl0WMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMXl..........':cl;,,;;;;;;:ldxkO0KXNWWMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMKc... .';cllollc:;,,',;;.    ...',;:cok0XNWMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMWNN0;.....':ccc:llc:,.';:c,              .',:ox0XWMM
+MMMMMMMMMMMMMMMMMMMMMMMWNK0xc'...   .....'';:c:,..,;:c;.                   .':oO
+MMMMMMMMMMMMMMMMMMMWNOd:'.           .....',;,'..',;,,;.                       .
+MMMMMMMMMMMMMMWXOdc;'.            .   ................,.                        
+MMMMMMMMMMMMNOl.                  .                  ';.                        
+MMMMMMMMMMNx;.                   .'.                 ;;                         
+MMMMMMMMW0:                       ,.                .:'                         
+MMMMMMMN0;                        ,,                ':.                         
+MMMMW0l,.                         ';.               ;;.                         
+MMMMX;                            ':.              .:,                          
+
 __  ______     ____  ___ _       ________
 \ \/ / __ \   / __ \/   | |     / / ____/
  \  / / / /  / / / / /| | | /| / / / __  
  / / /_/ /  / /_/ / ___ | |/ |/ / /_/ /  
 /_/\____/  /_____/_/  |_|__/|__/\____/   
                                          
-    ____   __  ___________    ____  ____     __  ______  __  __   __    ______ __ ______   ___   ____________________  _   _______
-   /  _/  / / / / ____/   |  / __ \/ __ \    \ \/ / __ \/ / / /  / /   /  _/ //_// ____/  /   | / ____/_  __/  _/ __ \/ | / / ___/
-   / /   / /_/ / __/ / /| | / /_/ / / / /     \  / / / / / / /  / /    / // ,<  / __/    / /| |/ /     / /  / // / / /  |/ /\__ \ 
- _/ /   / __  / /___/ ___ |/ _, _/ /_/ /      / / /_/ / /_/ /  / /____/ // /| |/ /___   / ___ / /___  / / _/ // /_/ / /|  /___/ / 
-/___/  /_/ /_/_____/_/  |_/_/ |_/_____/      /_/\____/\____/  /_____/___/_/ |_/_____/  /_/  |_\____/ /_/ /___/\____/_/ |_//____/  "
+    ____   __  ___________    ____  ____     __  ______  __  __
+   /  _/  / / / / ____/   |  / __ \/ __ \    \ \/ / __ \/ / / /
+   / /   / /_/ / __/ / /| | / /_/ / / / /     \  / / / / / / / 
+ _/ /   / __  / /___/ ___ |/ _, _/ /_/ /      / / /_/ / /_/ /  
+/___/  /_/ /_/_____/_/  |_/_/ |_/_____/      /_/\____/\____/   
+                                                               
+    __    ______ __ ______   ___   ____________________  _   _______
+   / /   /  _/ //_// ____/  /   | / ____/_  __/  _/ __ \/ | / / ___/
+  / /    / // ,<  / __/    / /| |/ /     / /  / // / / /  |/ /\__ \ 
+ / /____/ // /| |/ /___   / ___ / /___  / / _/ // /_/ / /|  /___/ / 
+/_____/___/_/ |_/_____/  /_/  |_\____/ /_/ /___/\____/_/ |_//____/  "
 }
 
 do_ascii
