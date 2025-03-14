@@ -7,16 +7,16 @@ on:
   pull_request:
     branches:
       - main
-	paths-ignore:
-		- '*.yml'
+  paths-ignore:
+    - '*.yml'
 
 jobs:
   test-validation:
     runs-on: ubuntu-latest
-		env:
-			VAR1: 1
-			VAR2: 'two'
-			VAR3: ['3']
+    env:
+      VAR1: 1
+      VAR2: 'two'
+      VAR3: ['3']
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
