@@ -17,6 +17,9 @@ jobs:
       VAR1: 1
       VAR2: 'two'
       VAR3: '3'
+    strategy:
+      matrix:
+        version: ['1', '2', '3']
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,7 +28,8 @@ jobs:
         run: echo "This is a test workflow for validation."
 
       - name: Set environment variable
-        run: echo "TEST_ENV=example" >> $GITHUB_ENV
+        run: |
+          echo "TEST_ENV=example" >> $GITHUB_ENV
 
       - name: Use environment variable
         run: echo "The test environment variable is $TEST_ENV"
@@ -35,4 +39,12 @@ jobs:
         run: echo "This step runs only on push events."
 
       - name: Example matrix strategy
-        run: echo "Example matrix job step"
+        run: |
+          echo "Example matrix job step"
+          echo "${{ matrix.version }}"
+
+      - name: Example using a environment variable
+        run: |
+          echo "${{ env.VAR1 }}"
+          echo "${{ env.VAR2 }}"
+          echo "${{ env.VAR3 }}"
