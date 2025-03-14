@@ -1,0 +1,38 @@
+name: Example Workflow for Validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+	paths-ignore:
+		- '*.yml'
+
+jobs:
+  test-validation:
+    runs-on: ubuntu-latest
+		env:
+			VAR1: 1
+			VAR2: 'two'
+			VAR3: ['3']
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print a message
+        run: echo "This is a test workflow for validation."
+
+      - name: Set environment variable
+        run: echo "TEST_ENV=example" >> $GITHUB_ENV
+
+      - name: Use environment variable
+        run: echo "The test environment variable is $TEST_ENV"
+
+      - name: Use a conditional step
+        if: github.event_name == 'push'
+        run: echo "This step runs only on push events."
+
+      - name: Example matrix strategy
+        run: echo "Example matrix job step"
