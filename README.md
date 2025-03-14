@@ -43,10 +43,10 @@ If you want to check any directory that _does not match_ `.github/workflows/*.ym
 
 **Example:**
 ```yaml
-	- name: Validate GitHub Actions
-	  uses: jazzsequence/github-action-validator@v1
-	  with:
-	    path-to-workflows: '.github/actions/*.yaml'
+    - name: Validate GitHub Actions
+      uses: jazzsequence/github-action-validator@v1
+      with:
+        path-to-workflows: '.github/actions/*.yaml'
 ```
 
 #### `show-ascii-art`
@@ -55,8 +55,8 @@ By default, the validator will output some super cool Xzibit ASCII art. Don't wa
 
 **Example:**
 ```yaml
-	- name: Validate GitHub Actions
-	  uses: jazzsequence/github-action-validator@v1
-	  with:
-	    show-ascii-art: false
+    - name: Validate GitHub Actions
+      uses: jazzsequence/github-action-validator@v1
+      with:
+        show-ascii-art: false
 ```
