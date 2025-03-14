@@ -1,0 +1,15 @@
+name: Validate and Test
+on:
+  push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v4
+      - name: Test fixtures
+        uses: ./
+        with:
+            path-to-workflows: '.github/workflows/fixtures/*.yml'
+            show-ascii-art: false
+      - name: Validate self
+        uses: ./
