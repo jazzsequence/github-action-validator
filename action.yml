@@ -9,6 +9,10 @@ inputs:
     description: The path to where your GitHub action workflow files are located. Defaults to `.github/workflows/*.yml`.
     required: false
     default: '.github/workflows/*.yml'
+  show-ascii-art:
+    description: Shows a silly Xzibit "Yo Dawg" ascii art before running the validator. Defaults to true.
+    required: false
+    default: true
 runs:
   using: composite
   steps:
@@ -31,7 +35,12 @@ runs:
         # Make executable and move to /usr/local/bin
         chmod +x action-validator
         sudo mv action-validator /usr/local/bin/action-validator
-        action-validator -v        
+        action-validator -v  
+    - name: Show Ascii art
+      shell: bash
+      if: ${{ inputs.show-ascii-art == true }}
+      run: |
+        bash ${{ github.action_path }}/bin/do-ascii.sh
     - name: Validate
     - run: |
         action-validator ${{ inputs.path-to-workflows }}
