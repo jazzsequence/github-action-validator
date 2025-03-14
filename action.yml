@@ -1,0 +1,37 @@
+name: GitHub Action Validator
+description: A GitHub action to validate your GitHub (action) workflows
+author: jazzsequence
+branding:
+  icon: refresh-cw
+  color: orange
+inputs:
+  path-to-workflows:
+    description: The path to where your GitHub action workflow files are located. Defaults to `.github/workflows/*.yml`.
+    required: false
+    default: '.github/workflows/*.yml'
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v4
+    - name: Install action-validator
+      shell: bash
+      run: |
+        # Fetch the latest release version dynamically from GitHub API
+        VERSION=$(curl -sSL https://api.github.com/repos/mpalmer/action-validator/releases/latest | jq -r '.tag_name')
+        FILE_NAME="action-validator_linux_amd64"
+        DOWNLOAD_URL="https://github.com/mpalmer/action-validator/releases/download/${VERSION}/${FILE_NAME}"
+        echo "Downloading mpalmer/action-validator ${VERSION} from ${DOWNLOAD_URL}..."
+
+        # Validate that the file is a valid binary
+        if ! file action-validator | grep -q "ELF"; then
+          echo "Download failed or invalid binary. Exiting."
+          exit 1
+        fi
+
+        # Make executable and move to /usr/local/bin
+        chmod +x action-validator
+        sudo mv action-validator /usr/local/bin/action-validator
+        action-validator -v        
+    - name: Validate
+    - run: |
+        action-validator ${{ inputs.path-to-workflows }}
