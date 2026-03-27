@@ -15,5 +15,5 @@ jobs:
         uses: ./
         with:
           path-to-workflows: |-
-            .github/**/*.yml
+            .github/workflows/**/*.yml
           show-ascii-art: true
