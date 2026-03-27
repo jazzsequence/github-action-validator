@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Tag & Release
-        uses: pantheon-systems/action-autotag@v0
+        uses: pantheon-systems/action-autotag@v1
         with:
           gh-token: ${{ github.token }}
