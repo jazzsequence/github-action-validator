@@ -75,3 +75,19 @@ By default, the validator will output some super cool Xzibit ASCII art. Don't wa
       with:
         show-ascii-art: false
 ```
+
+#### `version`
+
+The [mpalmer/action-validator](https://github.com/mpalmer/action-validator) release to install. Defaults to `latest`. Pin a tag if you want reproducible runs.
+
+**Example:**
+```yaml
+    - name: Validate GitHub Actions
+      uses: jazzsequence/github-action-validator@v1
+      with:
+        version: v0.8.0
+```
+
+#### `github-token`
+
+The action downloads the validator with the `gh` CLI, authenticated with this token so shared runner IPs don't hit GitHub's unauthenticated API rate limit. It defaults to the workflow's `github.token`, so you normally don't need to set it. The runner must have `gh` installed (GitHub-hosted runners do).
