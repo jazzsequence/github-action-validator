@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # autotag reads existing tags and commit history to pick the next version;
+          # a shallow checkout has no tags ("no stable version tags found").
+          fetch-depth: 0
       - name: Tag & Release
         uses: pantheon-systems/action-autotag@v1
         with:
