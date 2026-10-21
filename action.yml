@@ -13,6 +13,14 @@ inputs:
     description: Shows a silly Xzibit "Yo Dawg" ascii art before running the validator. Defaults to true.
     required: false
     default: true
+  version:
+    description: The mpalmer/action-validator release tag to install (e.g. `v0.8.0`). Defaults to `latest`.
+    required: false
+    default: latest
+  github-token:
+    description: Token used by `gh` to download the action-validator release. Defaults to the workflow's `github.token` to avoid unauthenticated API rate limits.
+    required: false
+    default: ${{ github.token }}
 runs:
   using: composite
   steps:
@@ -29,13 +37,23 @@ runs:
         fi
     - name: Install action-validator
       shell: bash
+      env:
+        GH_TOKEN: ${{ inputs.github-token }}
+        VALIDATOR_VERSION: ${{ inputs.version }}
       run: |
-        # Fetch the latest release version dynamically from GitHub API
-        VERSION=$(curl -sSL https://api.github.com/repos/mpalmer/action-validator/releases/latest | jq -r '.tag_name')
+        # gh authenticates the download, so shared runner IPs don't hit the
+        # unauthenticated API rate limit (which made the old tag lookup return "null").
         FILE_NAME="action-validator_linux_amd64"
-        DOWNLOAD_URL="https://github.com/mpalmer/action-validator/releases/download/${VERSION}/${FILE_NAME}"
-        echo "Downloading mpalmer/action-validator ${VERSION} from ${DOWNLOAD_URL} ..."
-        curl -sSL -o action-validator "$DOWNLOAD_URL"
+        TAG_ARGS=()
+        if [ -n "${VALIDATOR_VERSION}" ] && [ "${VALIDATOR_VERSION}" != "latest" ]; then
+          TAG_ARGS=("${VALIDATOR_VERSION}")
+        fi
+        echo "Downloading mpalmer/action-validator ${VALIDATOR_VERSION:-latest} ..."
+        gh release download "${TAG_ARGS[@]}" \
+          --repo mpalmer/action-validator \
+          --pattern "$FILE_NAME" \
+          --output action-validator \
+          --clobber
 
         # Validate that the file is a valid binary
         if ! file action-validator | grep -q "ELF"; then

@@ -17,3 +17,9 @@ jobs:
           path-to-workflows: |-
             .github/workflows/**/*.yml
           show-ascii-art: true
+      - name: Test pinned version
+        uses: ./
+        with:
+          path-to-workflows: '.github/workflows/fixtures/*.yml'
+          show-ascii-art: false
+          version: v0.8.0
